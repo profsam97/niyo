@@ -27,7 +27,7 @@ export class AuthService {
   async signup(signupDto: SignupDto): Promise<any> {
     const { email, username, password } = signupDto;
 
-    const existingUser = await prisma.user.findFrst({
+    const existingUser = await prisma.user.findFst({
       where: {
         OR: [{ email }, { username }],
       },
