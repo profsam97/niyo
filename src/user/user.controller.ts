@@ -1,7 +1,7 @@
 
 import {Body, Controller, Delete, Get, Patch} from '@nestjs/common';
 import { UserService } from './user.service';
-import { IAuthResponseUser, IResponseUser } from 'src/interfaces/user.interface';
+import { IAuthResponseUser, IProtectedUser, IResponseUser } from 'src/interfaces/user.interface';
 import { errorHandler } from 'src/utils/errorHandler';
 import { CurrentUser } from 'src/decorators';
 import { UpdateUserDto } from 'src/dtos/user/update-user.dto';
@@ -15,7 +15,7 @@ export class UserController {
   ) {}
     
   @Get('/me')
-  public async GetMe(@CurrentUser() id : number): Promise<IAuthResponseUser> {
+  public async GetMe(@CurrentUser() id : number): Promise<IProtectedUser> {
     
     try {
         return await this.userService.getCurrentUser(id);
@@ -25,7 +25,7 @@ export class UserController {
   }
 
   @Patch('/update-user')
-  public async UpdateUser(@CurrentUser() id: number,  @Body() updateUser : UpdateUserDto) : Promise<IResponseUser> {
+  public async UpdateUser(@CurrentUser() id: number,  @Body() updateUser : UpdateUserDto) : Promise<IProtectedUser> {
     try{
         return await this.userService.updateUser(id, updateUser)
     }
