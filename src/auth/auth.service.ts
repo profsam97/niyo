@@ -11,7 +11,7 @@ import { SignupDto } from 'src/dtos/auth/signup.dto';
 import { SigninDto } from 'src/dtos/auth/signin.dto';
 import { IAuthUser, User } from 'src/interfaces/user.interface';
 import { UserService } from 'src/user/user.service';
-import { SendOtpDto } from 'src/dtos/auth/sned-otp.dto';
+import { SendOtpDto } from 'src/dtos/auth/send-otp.dto';
 import { VerifyOtpDto } from 'src/dtos/auth/verify-otp.dto';
 import { RequestPasswordResetDto } from 'src/dtos/auth/password-reset.dto';
 import * as moment from 'moment';
