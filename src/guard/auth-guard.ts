@@ -27,7 +27,7 @@ import { isNull, isUndefined } from 'src/utils/validation.utils';
         context.switchToHttp().getRequest<ICustomRequest>(),
         isPublic,
       );
-  
+      // if its a public route, such as signup e.t.c, we should not have implement auth 
       if (!activate) {
         throw new UnauthorizedException();
       }
