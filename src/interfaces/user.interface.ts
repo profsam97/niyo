@@ -24,3 +24,10 @@ export interface User {
     createdAt: string;
     updatedAt: string;
   }
+
+  export interface IProtectedUser {
+    username: string,
+    email : string,
+    createdAt: Date,
+    updatedAt: Date,
+  }
