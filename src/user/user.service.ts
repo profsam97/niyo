@@ -2,19 +2,22 @@ import {  NotFoundException, UnauthorizedException } from '@nestjs/common';
 import { PrismaClient } from '@prisma/client';
 import * as bcrypt from 'bcrypt';
 import { UpdateUserDto } from 'src/dtos/user/update-user.dto';
+import { IProtectedUser } from 'src/interfaces/user.interface';
 
 const prisma = new PrismaClient();
 export class UserService {
   constructor(private readonly prisma: PrismaClient) {}
 
-  async getCurrentUser(userId: number): Promise<any> {
+  async getCurrentUser(userId: number): Promise<IProtectedUser> {
     const user: any = await prisma.user.findUnique({
       where: { id: userId },
     });
-    const { email, username } = user;
+    const { email, username, createdAt, updatedAt } = user;
     const userDetails = {
       email,
       username,
+      createdAt,
+      updatedAt
     };
     return userDetails;
   }
@@ -54,7 +57,7 @@ export class UserService {
     });
   }
 
-  async updateUser(userId: number, updateUserDto: UpdateUserDto): Promise<any> {
+  async updateUser(userId: number, updateUserDto: UpdateUserDto): Promise<IProtectedUser> {
     const { username } = updateUserDto;
 
     // Check if the user exists
@@ -70,9 +73,15 @@ export class UserService {
         data: { username },
       });
     }
-
+    const {email, createdAt, updatedAt} = user;
     // Return updated user
-    return await prisma.user.findUnique({ where: { id: userId } });
+    const userDetails  =  {
+      email,
+      username,
+      createdAt,
+      updatedAt
+    }
+    return userDetails;
   }
   async deleteUser(userId: number, password: string): Promise<string> {
     const user = await prisma.user.findUnique({ where: { id: userId } });
