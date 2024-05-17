@@ -7,10 +7,9 @@ import { SigninDto } from 'src/dtos/auth/signin.dto';
 import { IAuthUser } from 'src/interfaces/user.interface';
 import { errorHandler } from 'src/utils/errorHandler';
 import { Public } from 'src/decorators';
-import { SendOtpDto } from 'src/dtos/auth/sned-otp.dto';
+import { SendOtpDto } from 'src/dtos/auth/send-otp.dto';
 import { VerifyOtpDto } from 'src/dtos/auth/verify-otp.dto';
 import { RequestPasswordResetDto } from 'src/dtos/auth/password-reset.dto';
-import e from 'express';
 
 @Injectable()
 @Controller('api/v1/auth')
