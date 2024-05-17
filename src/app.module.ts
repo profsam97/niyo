@@ -5,7 +5,7 @@ import { TaskModule } from './task/task.module';
 import { UserModule } from './user/user.module';
 import { AuthModule } from './auth/auth.module';
 import { APP_GUARD } from '@nestjs/core';
-import { AuthGuard } from './guard/auth-gaurd';
+import { AuthGuard } from './guard/auth-guard';
 
 @Module({
   imports: [TaskModule, UserModule, AuthModule],
