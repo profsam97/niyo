@@ -1,11 +1,14 @@
-import { IsEmail, IsNotEmpty, IsString } from 'class-validator';
+import {  IsNotEmpty, IsString } from 'class-validator';
 
-export class CreateTask {
+export class CreateTaskDto {
   @IsString()
   @IsNotEmpty()
   name: string;
 
+
   @IsString()
   @IsNotEmpty()
   description: string;
+
+
 }
