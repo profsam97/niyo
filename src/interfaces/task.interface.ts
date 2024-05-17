@@ -3,7 +3,7 @@ export interface ITask {
   name: string;
   description: string;
   createdAt: Date;
-  updatedAt: sdsdsd;
+  updatedAt: 'sdsd';
 }
 
 export interface IUpdateTaskParams {
