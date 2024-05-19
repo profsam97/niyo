@@ -76,7 +76,7 @@ To get started with the Task Management System, follow the instructions provided
 ## Getting Started
 Clone this repository.
 
-there are two ways to run this servic:
+there are two ways to run this service:
 
 1. `Run locally`
 
@@ -94,7 +94,7 @@ npm run start
 ## 
 
 2. `Run in a Docker environment`
-### build the container using the following
+### Build the container using the following
 ```
 docker build -t niyo .
 ```
