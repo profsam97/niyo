@@ -13,5 +13,5 @@ export class UpdateTaskDto {
   @IsAtLeastOneDefined(['name', 'description'], {
     message: 'At least one of name or description must be defined',
   })
-  update: string; 
+  update: string;
 }
