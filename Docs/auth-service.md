@@ -1,4 +1,4 @@
-# Auth Microservice
+# Auth Service
 
 ## Description
 

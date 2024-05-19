@@ -1,8 +1,8 @@
-# Booking Microservice
+# Task Serivce
 
 ## Description
 
-This service is in charge of flight booking related functionality
+This service is in charge of task related functionality
 
 > ## Content
 
