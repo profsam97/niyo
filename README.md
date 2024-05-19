@@ -53,7 +53,7 @@ I've set up **Husky** to streamline development workflows. It enforces code qual
 
 ### Getting Started
 
-To get started with the Task Management System, follow the instructions provided in the Docshttps://github.com/profsam97/niyo/blob/main/Docs/auth-service.md folder files for each service:
+To get started with the Task Management System, follow the instructions provided in the Docs folder files for each service:
 
 
 - Auth Service: [Readme](https://github.com/profsam97/niyo/tree/main/Docs/auth-service.md)
