@@ -5,6 +5,7 @@ export const PrismaClient = jest.fn().mockImplementation(() => {
       findUnique: jest.fn(),
       update: jest.fn(),
       delete: jest.fn(),
+      findFirst: jest.fn()
     },
   };
 });
