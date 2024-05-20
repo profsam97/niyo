@@ -66,11 +66,10 @@ To get started with the Task Management System, follow the instructions provided
 - Typescript
 - Node.js
 - Nest.js
-- MongoDB (TypeORM)
 - PostgreSQL (prisma)
-- RabbitMQ (Message Queue)
 - JSON Web Tokens (JWT)
-- web socket
+- web socket (To stream data)
+- bcrypt.js
 
 
 ## Getting Started
