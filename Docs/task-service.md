@@ -10,7 +10,7 @@ This service is in charge of task related functionality
 
 - [Get Single Task](#get-single-task)
 - [Create Task](#create-task)
-- [Get All Task](#get-all-tasks)
+- [Get All Tasks](#get-all-tasks)
 - [Delete Task](#delete-task)
 - [Delete All Task](#delete-all-task)
 
@@ -136,7 +136,7 @@ This service is in charge of task related functionality
 
 ---
 
-## Get All Task
+## Get All Tasks
 
 > **GET** api/v1/task
 
