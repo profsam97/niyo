@@ -70,7 +70,7 @@ To get started with the Task Management System, follow the instructions provided
 - PostgreSQL (prisma)
 - RabbitMQ (Message Queue)
 - JSON Web Tokens (JWT)
-- bcrypt.js
+- web socket
 
 
 ## Getting Started
