@@ -6,7 +6,7 @@ This service is in charge of task related functionality
 
 > ## Content
 
-> ## Booking
+> ## Task
 
 - [Get Single Task](#get-single-task)
 - [Create Task](#create-task)
