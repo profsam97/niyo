@@ -7,13 +7,11 @@ services:
     ports:
       - "3000:3000"
     environment:
-        DATABASE_URL: "postgresql://guest:guest@web_db:5432/niyo"
+        DATABASE_URL: "postgresql://admin:admin@web_db:5432/niyo"
     depends_on: ['web_db'] 
   
   web_db:
-    image: postgres:13.5
-    networks:
-      - "postgres-db"
+    image: postgres
     expose:
       - "5432"
     volumes:
@@ -21,8 +19,8 @@ services:
     ports:
       - "5432:5432"
     environment:
-       POSTGRES_USER: "guest"
-       POSTGRES_PASSWORD: "guest"
+       POSTGRES_USER: "admin"
+       POSTGRES_PASSWORD: "admin"
        POSTGRES_DB: "niyo"
 
     restart: always
