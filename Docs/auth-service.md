@@ -43,7 +43,7 @@ This service is in charge of all Authentication and Authorization activities and
   "message": "User already exist or input validation error ",
   "errors": [
     {
-      "name": "username is required"
+      "username": "username is required"
     },
     {
       "Email": "Email is required"
@@ -74,7 +74,7 @@ This service is in charge of all Authentication and Authorization activities and
 {
   "user": {
     "id": "658b558347e889a31e9ee85f",
-    "name": "John Doe",
+    "username": "John Doe",
     "email": "JohnDoe@gmail.com",
     "createdAt": "2024-04-26T22:36:51Z",
     "updatedAt": "2024-04-27T09:52:40Z"
