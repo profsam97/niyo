@@ -1,11 +1,13 @@
-FROM node:14 AS buildnode
+FROM node:18 AS buildnode
 WORKDIR /usr/src/app
-COPY ./ ./client
-RUN cd client && npm install
+COPY package.json .
+RUN  npm install
+COPY . .
+RUN npx prisma generate
 RUN npm run build
 
-FROM node:14
+FROM node:18
 WORKDIR /usr/src/app
-COPY --from=buildnode /usr/src/app/client /usr/src/app/
+COPY --from=buildnode /usr/src/app .
 EXPOSE 3000
 CMD [ "npm", "start" ]
